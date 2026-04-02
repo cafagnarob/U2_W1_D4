@@ -1,0 +1,122 @@
+@keyframes cascata {
+  0% {
+    top: -620px;
+    scale: 1.2;
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+    top: 0;
+    scale: 1.2;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+    scale: 1;
+  }
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #666666;
+  position: absolute;
+}
+.card {
+  box-shadow: 6px 9px 6px 0px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px;
+  width: 260px;
+  height: 200px;
+  padding-left: 60px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.card h1 {
+  font-size: 3em;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1.6em;
+}
+
+.card:nth-child(1),
+.card:nth-child(5),
+.card:nth-child(7) {
+  opacity: 0;
+  background: linear-gradient(
+    179deg,
+    rgba(252, 252, 202, 1) 0%,
+    rgb(155, 156, 130) 100%
+  );
+}
+.card:nth-child(2),
+.card:nth-child(4),
+.card:nth-child(8) {
+  opacity: 0;
+  background: linear-gradient(
+    179deg,
+    rgba(202, 252, 203, 1) 0%,
+    rgb(123, 143, 124) 100%
+  );
+}
+.card:nth-child(3),
+.card:nth-child(6) {
+  opacity: 0;
+  background: linear-gradient(
+    179deg,
+    rgba(193, 194, 235, 1) 0%,
+    rgb(106, 106, 121) 100%
+  );
+}
+
+.card:nth-child(1) {
+  animation: cascata 5s linear 1s forwards;
+  transform: rotate(-7deg);
+}
+
+.card:nth-child(2) {
+  animation: cascata 5s linear 2s forwards;
+  transform: rotate(10deg);
+}
+.card:nth-child(3) {
+  animation: cascata 5s linear 3s forwards;
+  transform: rotate(-10deg);
+}
+.card:nth-child(4) {
+  animation: cascata 5s linear 4s forwards;
+  transform: rotate(15deg);
+}
+.card:nth-child(5) {
+  animation: cascata 5s linear 5s forwards;
+  transform: rotate(-2deg);
+}
+.card:nth-child(6) {
+  animation: cascata 5s linear 6s forwards;
+  transform: rotate(-8deg);
+}
+.card:nth-child(7) {
+  animation: cascata 5s linear 7s forwards;
+  transform: rotate(-8deg);
+}
+.card:nth-child(8) {
+  animation: cascata 5s linear 8s forwards;
+  transform: rotate(3deg);
+}
+
+.card:hover {
+  transform: rotate(0deg);
+  scale: 1.3;
+}
